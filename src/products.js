@@ -1,0 +1,85 @@
+const beautyProducts = [
+    // Skin Care
+    { id: 1, category: "Skin Care", subCategory: "Cleansers", name: "Gentle Foaming Cleanser", description: "A mild, foaming cleanser that removes impurities without stripping moisture.", price: 15, image: "link_to_image_1" },
+    { id: 2, category: "Skin Care", subCategory: "Moisturizers", name: "Hydrating Day Cream", description: "A lightweight moisturizer that provides all-day hydration with SPF 15.", price: 25, image: "link_to_image_2" },
+    { id: 3, category: "Skin Care", subCategory: "Serums", name: "Brightening Vitamin C Serum", description: "A potent serum that brightens skin tone and reduces the appearance of dark spots.", price: 30, image: "link_to_image_3" },
+    { id: 4, category: "Skin Care", subCategory: "Exfoliators", name: "Gentle Exfoliating Scrub", description: "A creamy scrub that gently exfoliates to reveal smoother, radiant skin.", price: 18, image: "link_to_image_4" },
+    { id: 5, category: "Skin Care", subCategory: "Sunscreens", name: "Lightweight Sunscreen SPF 50", description: "A non-greasy sunscreen that provides broad-spectrum protection without leaving a white cast.", price: 20, image: "link_to_image_5" },
+    { id: 6, category: "Skin Care", subCategory: "Face Masks", name: "Hydrating Gel Mask", description: "A refreshing gel mask that provides intense hydration for dry, tired skin.", price: 22, image: "link_to_image_6" },
+    { id: 7, category: "Skin Care", subCategory: "Toners", name: "Refreshing Rose Water Toner", description: "A soothing toner infused with rose water to balance and refresh the skin.", price: 12, image: "link_to_image_7" },
+    { id: 8, category: "Skin Care", subCategory: "Eye Creams", name: "Revitalizing Eye Cream", description: "An eye cream that reduces puffiness and dark circles, leaving the eyes looking bright and refreshed.", price: 28, image: "link_to_image_8" },
+    { id: 9, category: "Skin Care", subCategory: "Face Oils", name: "Nourishing Facial Oil", description: "A blend of natural oils that deeply nourish and hydrate the skin, promoting a healthy glow.", price: 35, image: "link_to_image_9" },
+    { id: 10, category: "Skin Care", subCategory: "Acne Treatments", name: "Clear Skin Acne Gel", description: "A targeted treatment gel that reduces breakouts and prevents future blemishes.", price: 18, image: "link_to_image_10" },
+
+    // Makeup
+    { id: 11, category: "Makeup", subCategory: "Foundations", name: "Flawless Finish Foundation", description: "A long-lasting foundation that provides full coverage with a natural finish.", price: 30, image: "link_to_image_11" },
+    { id: 12, category: "Makeup", subCategory: "Lipsticks", name: "Velvet Matte Lipstick", description: "A rich, pigmented lipstick that glides on smoothly for a velvet matte finish.", price: 18, image: "link_to_image_12" },
+    { id: 13, category: "Makeup", subCategory: "Mascaras", name: "Volumizing Mascara", description: "A volumizing mascara that adds length and definition for bold lashes.", price: 25, image: "link_to_image_13" },
+    { id: 14, category: "Makeup", subCategory: "Eyeshadows", name: "Shimmering Eyeshadow Palette", description: "A palette featuring 12 highly pigmented, shimmering shades for endless eye looks.", price: 40, image: "link_to_image_14" },
+    { id: 15, category: "Makeup", subCategory: "Blushes", name: "Soft Glow Blush", description: "A lightweight blush that adds a natural flush of color to the cheeks.", price: 22, image: "link_to_image_15" },
+    { id: 16, category: "Makeup", subCategory: "Highlighters", name: "Radiant Highlighter", description: "A creamy highlighter that provides a luminous glow to the high points of the face.", price: 20, image: "link_to_image_16" },
+    { id: 17, category: "Makeup", subCategory: "Primers", name: "Silk Smooth Primer", description: "A silicone-based primer that creates a smooth canvas for makeup application.", price: 30, image: "link_to_image_17" },
+    { id: 18, category: "Makeup", subCategory: "Setting Sprays", name: "Long-Lasting Setting Spray", description: "A setting spray that locks in makeup and keeps it fresh all day.", price: 18, image: "link_to_image_18" },
+    { id: 19, category: "Makeup", subCategory: "Concealers", name: "Complete Coverage Concealer", description: "A full-coverage concealer that hides blemishes and dark circles effectively.", price: 25, image: "link_to_image_19" },
+    { id: 20, category: "Makeup", subCategory: "Eyeliners", name: "Precision Liquid Eyeliner", description: "A liquid eyeliner that provides precise application for bold, defined lines.", price: 15, image: "link_to_image_20" },
+
+    // Hair Care
+    { id: 21, category: "Hair Care", subCategory: "Shampoos", name: "Revitalizing Shampoo", description: "A nourishing shampoo that cleanses while promoting healthy hair growth.", price: 18, image: "link_to_image_21" },
+    { id: 22, category: "Hair Care", subCategory: "Conditioners", name: "Hydrating Conditioner", description: "A moisturizing conditioner that detangles and nourishes dry, damaged hair.", price: 20, image: "link_to_image_22" },
+    { id: 23, category: "Hair Care", subCategory: "Hair Masks", name: "Deep Conditioning Hair Mask", description: "A rich hair mask that restores moisture and shine to dry hair in just minutes.", price: 25, image: "link_to_image_23" },
+    { id: 24, category: "Hair Care", subCategory: "Styling Products", name: "Lightweight Styling Cream", description: "A versatile cream that provides hold and definition without weighing hair down.", price: 15, image: "link_to_image_24" },
+    { id: 25, category: "Hair Care", subCategory: "Hair Oils", name: "Nourishing Hair Oil", description: "A blend of natural oils that smooths frizz and adds shine to hair.", price: 22, image: "link_to_image_25" },
+    { id: 26, category: "Hair Care", subCategory: "Hair Sprays", name: "Flexible Hold Hairspray", description: "A lightweight hairspray that provides hold without stiffness, perfect for everyday styling.", price: 12, image: "link_to_image_26" },
+    { id: 27, category: "Hair Care", subCategory: "Heat Protectants", name: "Thermal Shield Spray", description: "A protective spray that shields hair from heat damage caused by styling tools.", price: 18, image: "link_to_image_27" },
+    { id: 28, category: "Hair Care", subCategory: "Dry Shampoos", name: "Instant Refresh Dry Shampoo", description: "A dry shampoo that absorbs oil and refreshes hair between washes.", price: 15, image: "link_to_image_28" },
+    { id: 29, category: "Hair Care", subCategory: "Scalp Treatments", name: "Soothing Scalp Treatment", description: "A calming treatment for the scalp that alleviates dryness and irritation.", price: 20, image: "link_to_image_29" },
+    { id: 30, category: "Hair Care", subCategory: "Hair Tools", name: "Ceramic Hair Straightener", description: "A professional-grade straightener that delivers smooth, shiny results quickly.", price: 70, image: "link_to_image_30" },
+
+    // Nail Care
+    { id: 31, category: "Nail Care", subCategory: "Nail Polishes", name: "Glossy Nail Polish", description: "A vibrant nail polish that provides long-lasting color with a high-shine finish.", price: 10, image: "link_to_image_31" },
+    { id: 32, category: "Nail Care", subCategory: "Nail Files", name: "SmoothFinish Nail File", description: "A dual-sided nail file for shaping and smoothing nails, featuring an ergonomic handle for easy use.", price: 5, image: "link_to_image_32" },
+    { id: 33, category: "Nail Care", subCategory: "Cuticle Oils", name: "Nourishing Cuticle Oil", description: "A blend of natural oils that moisturizes and nourishes cuticles for healthy nails.", price: 12, image: "link_to_image_33" },
+    { id: 34, category: "Nail Care", subCategory: "Top Coats", name: "High-Shine Top Coat", description: "A protective top coat that enhances the shine and longevity of nail polish.", price: 15, image: "link_to_image_34" },
+    { id: 35, category: "Nail Care", subCategory: "Nail Treatments", name: "Strengthening Nail Treatment", description: "A strengthening formula that promotes healthy nail growth and prevents breakage.", price: 18, image: "link_to_image_35" },
+    { id: 36, category: "Nail Care", subCategory: "Nail Art Kits", name: "Nail Art Starter Kit", description: "A complete kit with tools and accessories for creating stunning nail art designs at home.", price: 30, image: "link_to_image_36" },
+    { id: 37, category: "Nail Care", subCategory: "Manicure Sets", name: "Deluxe Manicure Set", description: "A professional manicure set with all the essential tools for perfect nails.", price: 25, image: "link_to_image_37" },
+    { id: 38, category: "Nail Care", subCategory: "Press-On Nails", name: "Fashion Press-On Nails", description: "Trendy press-on nails that provide an instant manicure without the wait.", price: 15, image: "link_to_image_38" },
+    { id: 39, category: "Nail Care", subCategory: "Nail Wraps", name: "Design Nail Wraps", description: "Adhesive nail wraps with fun designs for quick and easy nail art.", price: 10, image: "link_to_image_39" },
+    { id: 40, category: "Nail Care", subCategory: "Nail Glue", name: "Strong Hold Nail Glue", description: "A fast-drying nail glue for secure adhesion of artificial nails.", price: 8, image: "link_to_image_40" },
+
+    // Body Care
+    { id: 41, category: "Body Care", subCategory: "Body Washes", name: "Moisturizing Body Wash", description: "A creamy body wash that cleanses while hydrating and softening the skin.", price: 15, image: "link_to_image_41" },
+    { id: 42, category: "Body Care", subCategory: "Lotions", name: "Silky Body Lotion", description: "A lightweight lotion that absorbs quickly, leaving the skin feeling smooth and hydrated.", price: 20, image: "link_to_image_42" },
+    { id: 43, category: "Body Care", subCategory: "Scrubs", name: "Exfoliating Body Scrub", description: "A gentle scrub that removes dead skin cells, leaving the skin feeling refreshed and smooth.", price: 18, image: "link_to_image_43" },
+    { id: 44, category: "Body Care", subCategory: "Deodorants", name: "Natural Deodorant Stick", description: "A gentle, aluminum-free deodorant that provides all-day odor protection.", price: 12, image: "link_to_image_44" },
+    { id: 45, category: "Body Care", subCategory: "Body Oils", name: "Nourishing Body Oil", description: "A luxurious oil that deeply hydrates and leaves the skin with a beautiful glow.", price: 25, image: "link_to_image_45" },
+    { id: 46, category: "Body Care", subCategory: "Foot Care", name: "Cooling Foot Cream", description: "A soothing cream that refreshes tired feet and provides long-lasting hydration.", price: 15, image: "link_to_image_46" },
+    { id: 47, category: "Body Care", subCategory: "Hand Creams", name: "Intensive Hand Cream", description: "A rich hand cream that nourishes and protects dry, cracked hands.", price: 18, image: "link_to_image_47" },
+    { id: 48, category: "Body Care", subCategory: "Shaving Creams", name: "Gentle Shaving Cream", description: "A moisturizing shaving cream that provides a smooth glide for a comfortable shave.", price: 10, image: "link_to_image_48" },
+    { id: 49, category: "Body Care", subCategory: "Sun Care", name: "After-Sun Lotion", description: "A soothing lotion that hydrates and calms skin after sun exposure.", price: 22, image: "link_to_image_49" },
+    { id: 50, category: "Body Care", subCategory: "Bath Products", name: "Relaxing Bath Soak", description: "A fragrant bath soak that promotes relaxation and softens the skin.", price: 18, image: "link_to_image_50" },
+
+    // Fragrances
+    { id: 51, category: "Fragrances", subCategory: "Perfumes", name: "Eau de Parfum", description: "A luxurious fragrance with floral and fruity notes for a captivating scent.", price: 70, image: "link_to_image_51" },
+    { id: 52, category: "Fragrances", subCategory: "Eau de Toilettes", name: "Fresh Eau de Toilette", description: "A light and refreshing scent perfect for everyday wear.", price: 50, image: "link_to_image_52" },
+    { id: 53, category: "Fragrances", subCategory: "Body Sprays", name: "Citrus Body Spray", description: "A zesty body spray that provides a burst of freshness throughout the day.", price: 15, image: "link_to_image_53" },
+    { id: 54, category: "Fragrances", subCategory: "Roll-On Fragrances", name: "Travel Size Roll-On", description: "A convenient roll-on fragrance perfect for on-the-go application.", price: 10, image: "link_to_image_54" },
+    { id: 55, category: "Fragrances", subCategory: "Scented Oils", name: "Exotic Scented Oil", description: "A rich, concentrated oil that provides a long-lasting fragrance experience.", price: 25, image: "link_to_image_55" },
+    { id: 56, category: "Fragrances", subCategory: "Candles", name: "Aromatherapy Candle", description: "A scented candle that creates a calming atmosphere and enhances relaxation.", price: 20, image: "link_to_image_56" },
+    { id: 57, category: "Fragrances", subCategory: "Diffusers", name: "Essential Oil Diffuser", description: "An elegant diffuser that disperses your favorite essential oils throughout your space.", price: 35, image: "link_to_image_57" },
+    { id: 58, category: "Fragrances", subCategory: "Fragrance Sets", name: "Luxury Fragrance Gift Set", description: "A beautifully packaged set featuring a perfume and body lotion for a complete fragrance experience.", price: 90, image: "link_to_image_58" },
+    { id: 59, category: "Fragrances", subCategory: "Car Fragrances", name: "Car Air Freshener", description: "A scented air freshener designed to keep your car smelling fresh and inviting.", price: 8, image: "link_to_image_59" },
+    { id: 60, category: "Fragrances", subCategory: "Solid Perfumes", name: "Solid Perfume Compact", description: "A portable compact of solid perfume, perfect for touch-ups throughout the day.", price: 15, image: "link_to_image_60" },
+
+    // Oral Care
+    { id: 61, category: "Oral Care", subCategory: "Toothpastes", name: "Whitening Toothpaste", description: "A fluoride toothpaste that helps remove stains and whiten teeth with regular use.", price: 8, image: "link_to_image_61" },
+    { id: 62, category: "Oral Care", subCategory: "Mouthwashes", name: "Alcohol-Free Mouthwash", description: "A refreshing mouthwash that kills germs without the sting of alcohol.", price: 6, image: "link_to_image_62" },
+    { id: 63, category: "Oral Care", subCategory: "Toothbrushes", name: "Ergonomic Toothbrush", description: "A soft-bristled toothbrush with an ergonomic handle for comfortable brushing.", price: 5, image: "link_to_image_63" },
+    { id: 64, category: "Oral Care", subCategory: "Dental Floss", name: "Mint Dental Floss", description: "A refreshing mint dental floss that effectively removes plaque between teeth.", price: 4, image: "link_to_image_64" },
+    { id: 65, category: "Oral Care", subCategory: "Teeth Whiteners", name: "Teeth Whitening Strips", description: "Whitening strips that visibly brighten teeth in just a few applications.", price: 30, image: "link_to_image_65" },
+    { id: 66, category: "Oral Care", subCategory: "Mouth Guards", name: "Night Guard", description: "A comfortable night guard to protect teeth from grinding during sleep.", price: 20, image: "link_to_image_66" },
+    { id: 67, category: "Oral Care", subCategory: "Breath Fresheners", name: "Breath Freshening Spray", description: "A quick spray that provides instant fresh breath anytime, anywhere.", price: 10, image: "link_to_image_67" },
+    { id: 68, category: "Oral Care", subCategory: "Teeth Cleaning Devices", name: "Electric Toothbrush", description: "An advanced electric toothbrush for superior cleaning and plaque removal.", price: 80, image: "link_to_image_68" },
+    { id: 69, category: "Oral Care", subCategory: "Toothpicks", name: "Wooden Toothpicks", description: "Natural wooden toothpicks for easy cleaning between teeth.", price: 3, image: "link_to_image_69" },
+    { id: 70, category: "Oral Care", subCategory: "Tongue Scrapers", name: "Stainless Steel Tongue Scraper", description: "A durable tongue scraper for better oral hygiene and fresher breath.", price: 12, image: "link_to_image_70" }
+]

@@ -1,0 +1,56 @@
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    background-color: #ff0000;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+.headline{
+    background-color: blue;
+    width: 500px;
+    background-color: blue;
+    margin: 15px;
+}
+
+.imagery{
+    background-color: yellow;
+    height: 350px;
+    width: 300px;
+    margin: 15px;
+}
+
+.customer_rating{
+    background-color: pink;
+    height: 150px;
+    width: 300px;
+    margin: 15px;
+}
+
+.discounts{
+    background-color: green;
+    height: auto;
+    width: 300px;
+    margin: 15px;
+}
+
+.trusted_companies{
+    background-color: maroon;
+    height: 50px;
+    width: 300px;
+    margin: 15px;
+}
+
+.qualities{
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+}
